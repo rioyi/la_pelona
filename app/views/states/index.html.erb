@@ -13,6 +13,7 @@
   <tbody>
     <% @states.each do |state| %>
       <tr>
+        <td><%= state.id %></td>
         <td><%= state.name %></td>
         <td><%= link_to 'Show', state %></td>
         <td><%= link_to 'Edit', edit_state_path(state) %></td>
