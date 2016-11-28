@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sickness Specifics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Cod</th>
+      <th>Sickness general</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sickness_specifics.each do |sickness_specific| %>
+      <tr>
+        <td><%= sickness_specific.name %></td>
+        <td><%= sickness_specific.cod %></td>
+        <td><%= sickness_specific.sickness_general.name %></td>
+        <td><%= link_to 'Show', sickness_specific %></td>
+        <td><%= link_to 'Edit', edit_sickness_specific_path(sickness_specific) %></td>
+        <td><%= link_to 'Destroy', sickness_specific, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sickness Specific', new_sickness_specific_path %>
