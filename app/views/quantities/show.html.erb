@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sexo:</strong>
+  <%= @quantity.sexo_id %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @quantity.estado_id %>
+</p>
+
+<p>
+  <strong>Enfermedades:</strong>
+  <%= @quantity.enfermedades_id %>
+</p>
+
+<p>
+  <strong>Periodo:</strong>
+  <%= @quantity.periodo_id %>
+</p>
+
+<p>
+  <strong>Edad:</strong>
+  <%= @quantity.edad_id %>
+</p>
+
+<p>
+  <strong>Cantidad:</strong>
+  <%= @quantity.cantidad %>
+</p>
+
+<%= link_to 'Edit', edit_quantity_path(@quantity) %> |
+<%= link_to 'Back', quantities_path %>
