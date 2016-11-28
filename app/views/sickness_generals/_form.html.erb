@@ -1,0 +1,22 @@
+<%= form_for(sickness_general) do |f| %>
+  <% if sickness_general.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sickness_general.errors.count, "error") %> prohibited this sickness_general from being saved:</h2>
+
+      <ul>
+      <% sickness_general.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
