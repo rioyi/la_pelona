@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sickness_specific.name %>
+</p>
+
+<p>
+  <strong>Cod:</strong>
+  <%= @sickness_specific.cod %>
+</p>
+
+<p>
+  <strong>Sickness general:</strong>
+  <%= @sickness_specific.sickness_general_id %>
+</p>
+
+<%= link_to 'Edit', edit_sickness_specific_path(@sickness_specific) %> |
+<%= link_to 'Back', sickness_specifics_path %>

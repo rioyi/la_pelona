@@ -1,0 +1,2 @@
+module SicknessGeneralsHelper
+end
