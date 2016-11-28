@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :ages
   resources :states
   resources :sickness_specifics
   resources :sickness_generals
