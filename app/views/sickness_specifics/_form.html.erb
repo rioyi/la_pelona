@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label :sickness_general_id %>
-    <%= f.number_field :sickness_general_id %>
+    <%= f.collection_select :sickness_general_id, SicknessGeneral.all, :id, :name %>
   </div>
 
   <div class="actions">

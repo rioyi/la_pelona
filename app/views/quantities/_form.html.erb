@@ -12,28 +12,28 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :sex_id %>
-    <%= f.text_field :sex_id %>
+    <%= f.label :sex_id, "Sexo" %>
+    <%= f.collection_select :sex_id, Sex.all, :id, :name %>
   </div>
 
   <div class="field">
-    <%= f.label :state_id %>
-    <%= f.text_field :state_id %>
+    <%= f.label :state_id, "Estado" %>
+    <%= f.collection_select :state_id, State.all, :id, :name %>
   </div>
 
   <div class="field">
-    <%= f.label :sickness_specific_id %>
-    <%= f.text_field :sickness_specific_id %>
+    <%= f.label :sickness_specific_id, "Enfermedad Especifica" %>
+    <%= f.collection_select :sickness_specific_id, SicknessSpecific.all, :id, :name %>
   </div>
 
   <div class="field">
-    <%= f.label :period_id %>
-    <%= f.text_field :period_id %>
+    <%= f.label :period_id, "Periodo" %>
+    <%= f.collection_select :period_id, Period.all, :id, :year %>
   </div>
 
   <div class="field">
-    <%= f.label :age_id %>
-    <%= f.text_field :age_id %>
+    <%= f.label :age_id, "Edad" %>
+    <%= f.collection_select :age_id, Age.all, :id, :edad %>
   </div>
 
   <div class="field">

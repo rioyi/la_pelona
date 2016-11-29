@@ -2,7 +2,7 @@
     <div class="col-lg-12">
         <h1 class="page-header">Lista de Enfermedades Especificas</h1>
     </div>
-    <%= link_to new_sickness_specific_path(@sickness_specific), :class => 'btn btn-success' do %>
+    <%= link_to new_quantity_path(@sickness_specific), :class => 'btn btn-success' do %>
 
       <font color="White">    Nueva Enfermedad Especifica </font>
     <% end %>
@@ -41,7 +41,7 @@
         <td><%= quantity.sickness_specific.name %></td>
         <td><%= quantity.period.year %></td>
         <td><%= quantity.age.edad %></td>
-        <td><%= quantity.cantidad %></td>        
+        <td><%= quantity.cantidad %></td>
         <td><%= link_to 'Mostrar', quantity, :class => 'btn btn-primary' %></td>
         <td><%= link_to 'Editar', edit_quantity_path(quantity), :class => 'btn btn-warning' %></td>
         <td><%= link_to 'Eliminar', quantity, method: :delete, data: { confirm: '¿Seguro desea Eliminar?' }, :class => 'btn btn-danger' %></td>
