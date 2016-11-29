@@ -1,5 +1,6 @@
 class SicknessSpecificsController < ApplicationController
   before_action :set_sickness_specific, only: [:show, :edit, :update, :destroy]
+  before_action :set_sickness_general, only: [:new, :edit, :create, :update]
 
   # GET /sickness_specifics
   # GET /sickness_specifics.json
@@ -65,6 +66,10 @@ class SicknessSpecificsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_sickness_specific
       @sickness_specific = SicknessSpecific.find(params[:id])
+    end
+
+    def set_sickness_general
+      @sickness_general = SicknessGeneral.all
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
