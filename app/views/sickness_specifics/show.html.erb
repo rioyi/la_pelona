@@ -1,19 +1,19 @@
-<p id="notice"><%= notice %></p>
-
+<h4><p id="notice"><%= notice %></p></h4>
+<h1>Mostrando Enfermedades Especificas</h1>
 <p>
+  <h1>
   <strong>Name:</strong>
   <%= @sickness_specific.name %>
 </p>
-
-<p>
-  <strong>Cod:</strong>
-  <%= @sickness_specific.cod %>
+</h1>
 </p>
 
-<p>
-  <strong>Sickness general:</strong>
-  <%= @sickness_specific.sickness_general_id %>
-</p>
+<%= link_to edit_sickness_specific_path(@sickness_specific), :class => 'btn btn-success' do %>
+  <font color="White">    Editar </font>
+<% end %>
 
-<%= link_to 'Edit', edit_sickness_specific_path(@sickness_specific) %> |
-<%= link_to 'Back', sickness_specifics_path %>
+|
+
+<%= link_to sickness_specifics_path, :class => 'btn btn-primary' do %>
+  <font color="White">    Regresar </font>
+<% end %>
