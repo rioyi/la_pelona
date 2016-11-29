@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
+  resources :quantities
   get 'welcome/index'
 
-  resources :quantities
   resources :periods
   resources :sexes
   resources :ages

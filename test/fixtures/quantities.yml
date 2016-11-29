@@ -1,17 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  sexo_id: 1
-  estado_id: 1
-  enfermedades_id: 1
-  periodo_id: 1
-  edad_id: 1
+  sex: one
+  state: one
+  sickness_specific: one
+  period: one
+  age: one
   cantidad: 1
 
 two:
-  sexo_id: 1
-  estado_id: 1
-  enfermedades_id: 1
-  periodo_id: 1
-  edad_id: 1
+  sex: two
+  state: two
+  sickness_specific: two
+  period: two
+  age: two
   cantidad: 1

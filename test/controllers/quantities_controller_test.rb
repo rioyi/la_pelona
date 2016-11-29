@@ -17,7 +17,7 @@ class QuantitiesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create quantity" do
     assert_difference('Quantity.count') do
-      post quantities_url, params: { quantity: { cantidad: @quantity.cantidad, edad_id: @quantity.edad_id, enfermedades_id: @quantity.enfermedades_id, estado_id: @quantity.estado_id, periodo_id: @quantity.periodo_id, sexo_id: @quantity.sexo_id } }
+      post quantities_url, params: { quantity: { age_id: @quantity.age_id, cantidad: @quantity.cantidad, period_id: @quantity.period_id, sex_id: @quantity.sex_id, sickness_specific_id: @quantity.sickness_specific_id, state_id: @quantity.state_id } }
     end
 
     assert_redirected_to quantity_url(Quantity.last)
@@ -34,7 +34,7 @@ class QuantitiesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update quantity" do
-    patch quantity_url(@quantity), params: { quantity: { cantidad: @quantity.cantidad, edad_id: @quantity.edad_id, enfermedades_id: @quantity.enfermedades_id, estado_id: @quantity.estado_id, periodo_id: @quantity.periodo_id, sexo_id: @quantity.sexo_id } }
+    patch quantity_url(@quantity), params: { quantity: { age_id: @quantity.age_id, cantidad: @quantity.cantidad, period_id: @quantity.period_id, sex_id: @quantity.sex_id, sickness_specific_id: @quantity.sickness_specific_id, state_id: @quantity.state_id } }
     assert_redirected_to quantity_url(@quantity)
   end
 
