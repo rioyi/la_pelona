@@ -1,9 +1,18 @@
-<p id="notice"><%= notice %></p>
-
+<h4><p id="notice"><%= notice %></p></h4>
+<h1>Mostrando Estado</h1>
 <p>
+  <h1>
   <strong>Name:</strong>
   <%= @state.name %>
+</h1>
 </p>
 
-<%= link_to 'Edit', edit_state_path(@state) %> |
-<%= link_to 'Back', states_path %>
+<%= link_to edit_state_path(@state), :class => 'btn btn-success' do %>
+  <font color="White">    Editar </font>
+<% end %>
+
+|
+
+<%= link_to states_path, :class => 'btn btn-primary' do %>
+  <font color="White">    Regresar </font>
+<% end %>

@@ -69,6 +69,6 @@ class QuantitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def quantity_params
-      params.require(:quantity).permit(:sexo_id, :estado_id, :enfermedades_id, :periodo_id, :edad_id, :cantidad)
+      params.require(:quantity).permit(:sexo_id, :estado_id, :enfermedades_id, :periodo_id, :age_id, :cantidad)
     end
 end

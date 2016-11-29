@@ -1,13 +1,31 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Lista de Enfermedades Especificas</h1>
+    </div>
+    <%= link_to new_sickness_specific_path(@sickness_specific), :class => 'btn btn-success' do %>
 
-<h1>Sickness Specifics</h1>
+      <font color="White">    Nueva Enfermedad Especifica </font>
+    <% end %>
+    <p id="notice"><%= notice %></p>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                DataTables Advanced Tables
+            </div>
 
-<table>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Nombre</th>
       <th>Cod</th>
-      <th>Sickness general</th>
+      <th>Enfermedad General</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,14 +36,11 @@
         <td><%= sickness_specific.name %></td>
         <td><%= sickness_specific.cod %></td>
         <td><%= sickness_specific.sickness_general.name %></td>
-        <td><%= link_to 'Show', sickness_specific %></td>
-        <td><%= link_to 'Edit', edit_sickness_specific_path(sickness_specific) %></td>
-        <td><%= link_to 'Destroy', sickness_specific, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', sickness_specific, :class => 'btn btn-primary' %></td>
+        <td><%= link_to 'Editar', edit_sickness_specific_path(sickness_specific), :class => 'btn btn-warning' %></td>
+        <td><%= link_to 'Eliminar', sickness_specific, method: :delete, data: { confirm: '¿Seguro desea Eliminar?' }, :class => 'btn btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
 <br>
-
-<%= link_to 'New Sickness Specific', new_sickness_specific_path %>

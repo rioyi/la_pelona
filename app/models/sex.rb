@@ -1,2 +1,3 @@
 class Sex < ApplicationRecord
+  
 end

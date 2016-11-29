@@ -3,12 +3,23 @@
   <head>
     <title>LaPelona</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+        <div id="wrapper">
+            <!-- Navigation -->
+            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <%= render partial: 'layouts/head' %>
+                <!-- /.navbar-header -->
+                <!-- MENU -->
+                <%= render partial: 'layouts/menu' %>
+                <!-- MENU -->
+            </nav>
+
+            <div id="page-wrapper">
+            <%= yield %>
+            </div>
   </body>
 </html>
